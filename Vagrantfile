@@ -69,6 +69,8 @@ ansible_provision = proc do |ansible|
       cluster_network: "#{CLUSTER_SUBNET}.0/24",
       journal_size: 100,
       public_network: "#{PUBLIC_SUBNET}.0/24",
+      monitor_secret: "AQBQn8tUsBHSIBAACVlivUvyNkn2EZREERyZRw==",
+      osd_pool_default_pg_num: 128,
   }
 
   # In a production deployment, these should be secret
