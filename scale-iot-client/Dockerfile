@@ -18,8 +18,9 @@ RUN cd /tmp && \
     cd cryptopp700 && \
     export CXX=clang++-6.0 && \
     export CXXFLAGS="" && \
-    make && \
-    make install clean
+    make static dynamic cryptest.exe && \
+    make libcryptopp.a libcryptopp.so cryptest.exe && \
+    make install clean PREFIX=/usr/local
 
 # Create infinite loop script to run container in daemon mode
 RUN echo 'sleep infinity' >> /bootstrap.sh
