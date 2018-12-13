@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 # Install librados
 RUN apt-get update && \
-    apt-get install -y curl wget unzip gnupg software-properties-common && \
+    apt-get install -y curl wget git unzip gnupg software-properties-common && \
     wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - && \
     apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main" && \
     apt-get update && \
